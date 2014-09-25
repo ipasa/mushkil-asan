@@ -11,7 +11,15 @@
 |
 */
 
-Route::get('/', function()
-{
-	return View::make('hello');
-});
+Route::get('/', array(
+    'as'    =>  'home',
+    'uses'  =>  'HomeController@showWelcome'
+));
+Route::get('/registration', array(
+    'as'    =>  'registration',
+    'uses'  =>  'UserManageController@getregisterUser'
+));
+Route::get('/login', array(
+    'as'    =>  'login',
+    'uses'  =>  'UserManageController@getLoginUser'
+));

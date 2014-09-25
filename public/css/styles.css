@@ -1,0 +1,263 @@
+body {
+	background-color: #f2f2f2;
+	font-family: 'Open Sans', sans-serif;
+}
+.answer { background: rgb(236, 218, 194);}
+.answer h2, p { text-align: center; }
+
+.vote { background: #cdcdcd;}
+.vote h2, p { text-align: center; }
+
+.view { background: #ccdccd; }
+.view h2, p { text-align: center; }
+
+div.question {
+	padding-left: 15px;
+	margin-top: -5px;
+}
+div.question p {
+	text-align: left;
+}
+
+.container {
+	width: 1170px;
+}
+
+.question-section {
+	background-color: #f2f2f2;
+	width: 1170px;
+	margin: 0 auto;
+}
+div.question>h2 {
+}
+
+.navbar{
+	width: 1170px;
+	margin: 0 auto;
+	border-radius: 0px;
+	margin-top: 30px;
+	margin-bottom: 20px;
+}
+
+.navbar-default .container {
+	background-color: #fff;
+	border-bottom: 1px solid #f2f2f2;
+	/* height: 73px; */
+}
+
+.navbar-nav>li {
+	float: left;
+	margin: 10px 15px 0 0;
+}
+
+.navbar>.container .navbar-brand, .navbar>.container-fluid .navbar-brand {
+	margin-left: -15px;
+	margin: 10px 15px 0 0;
+}
+
+.navbar-default .navbar-nav>.active>a {
+	color: #555;
+	border-bottom: 2px solid #000;
+	background-color: #fff;
+}
+
+.navbar-form .form-group {
+	margin: 10px 15px 0 0 ;
+}
+
+.single-question {
+	margin-bottom: 6px;
+	background-color: #fff;
+	padding-bottom: 15px;
+	border-bottom: 1px solid #E0E0E0;
+}
+
+p.myRight{float: right;}
+p.myLeft {float: left; }
+
+
+.col-lg-8 {
+/* 	margin-right:15px;
+width:31.6% */;
+}
+.cover-photo {
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	height: 280px;
+	opacity: 0.7;
+}
+.alpha-50 {
+	background: url(../assets/alpha-50.png) 0.9;
+}
+
+.myName {
+	position: absolute;
+	top: 70px;
+	left: 30%;
+	margin: 0 auto;
+}
+.myName p {
+	font-family: 'open sans';
+	color: #fff;
+	font-weight: bold;
+	border: 2px solid #fff;
+	font-size: 21px;
+	letter-spacing: 11px;
+	padding: 31px 30px 34px 30px;
+	text-transform: uppercase;
+	font-family: 'SegoeUISemibold';
+}
+.profileRow {
+	background-color: #fff;
+	margin-bottom: 15px;
+}
+
+.profileRowHeight {
+	height: 225px;
+	overflow: hidden;
+}
+.name-tag p {
+	text-align: left;
+}
+
+.profile-photo {
+	background-color: #CDCDCD;
+	margin: 0;
+	padding: 0;
+}
+
+.name-tag {
+	background-color: #45382e;
+	border-right: 2px solid #fff;
+	color: #fff;
+}
+.profileRating {
+	margin-top: 5px;
+}
+.ratingRowHeight {
+	height: 350px;
+}
+.rating {
+	background-color: #b1b1ac;
+	border-right: 2px solid #fff;
+}
+.rating h1{
+	text-align: center;
+}
+.rating-additional {
+	background-color: #a88251;
+	color: #fff;
+}
+.rating-additional p {
+	text-align: justify;
+}
+
+.info-1 {
+	background-color: #b1b1ac;
+	border-left: 2px solid #fff;
+	height: 380px;
+}
+.info-2 {
+	background-color: #45382e;
+	border-left: 2px solid #fff;
+	border-top: 5px solid #fff;
+	height: 200px;
+	color: #fff;
+}
+.info-2 b {
+	display: inline-block;
+	width: 80px;
+}
+.customHR {
+	background-color: #a88251;
+	height: 2px;
+}
+.glyphicon {
+	border: 1px solid #a88251;
+	color: #a88251;
+	padding: 5px;
+}
+.mySocialPosition{
+	position: relative;
+}
+.mySocial {
+	position: absolute;
+	top: 67px;
+	left: 2px;
+}
+
+
+/* Form-Design Code Section */
+
+.profile-img {
+	width: 96px;
+	height: 96px;
+	margin: 0 auto 10px;
+	display: block;
+	-moz-border-radius: 50%;
+	-webkit-border-radius: 50%;
+	border-radius: 50%;
+}
+
+.colored {
+	background-color: #F0EEEE;
+}
+
+.row {
+	padding:20px 0px;
+	margin-top: -22px;
+}
+
+.bigicon {
+	font-size:97px;
+	color: #f96145;
+}
+
+.contcustom {
+	text-align: center;
+	width: 300px;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: 10px auto;
+	background-color: white;
+	padding: 20px;
+}   
+
+input {
+	width: 100%;
+	margin-bottom: 17px;
+	padding: 15px;
+	background-color: #ECF4F4;
+	border-radius: 2px;
+	border: none;
+}
+
+h2 {
+	margin-bottom: 20px;
+	font-weight: bold;
+	color: #ABABAB;
+}
+
+.btn {
+	border-radius: 2px;
+	padding: 10px;     
+}
+
+.med {
+	font-size: 27px;
+	color: white;
+}
+
+.wide {
+	background-color: #8EB7E4;
+	width: 100%;
+	-webkit-border-top-right-radius: 0;
+	-webkit-border-bottom-right-radius: 0;
+	-moz-border-radius-topright: 0;
+	-moz-border-radius-bottomright: 0;
+	border-top-right-radius: 0;
+	border-bottom-right-radius: 0;
+}
