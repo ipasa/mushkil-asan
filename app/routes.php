@@ -15,11 +15,45 @@ Route::get('/', array(
     'as'    =>  'home',
     'uses'  =>  'HomeController@showWelcome'
 ));
-Route::get('/registration', array(
-    'as'    =>  'registration',
-    'uses'  =>  'UserManageController@getregisterUser'
-));
-Route::get('/login', array(
-    'as'    =>  'login',
-    'uses'  =>  'UserManageController@getLoginUser'
-));
+
+//Unauthenticate group
+Route::group(array('before'=>'guest'), function(){
+
+    /*
+     * Protected From CSRF
+    */
+    Route::group(array('before'=>'csrf'), function(){
+
+        /*
+         * Create a new account
+        */
+        Route::post('/registration', array(
+            'as'    =>  'registration',
+            'uses'  =>  'UserManageController@postregisterUser'
+        ));
+
+        /*
+         * Login a account(Post)
+        */
+        Route::post('/login', array(
+            'as'    =>  'login',
+            'uses'  =>  'UserManageController@postLoginUser'
+        ));
+
+    });
+
+    Route::get('/registration', array(
+        'as'    =>  'registration',
+        'uses'  =>  'UserManageController@getregisterUser'
+    ));
+    Route::get('/activate/{code}',array(
+        'as'    =>  'activateAccount',
+        'uses'  =>  'UserManageController@activateAccountByEmail'
+    ));
+
+    Route::get('/login', array(
+        'as'    =>  'login',
+        'uses'  =>  'UserManageController@getLoginUser'
+    ));
+
+});
