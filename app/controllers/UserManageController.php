@@ -70,14 +70,15 @@ class UserManageController extends BaseController {
 
             if($user->save()){
                 return  Redirect::route('login')
-                        ->with('global', 'Your Account Has been activated now, Please Login');;// Need Some Edit
+                        ->with('global', 'Your Account Has been activated now, Please Login');
             }
-        }
+        }else{
 
-        //if some problem, not activate this account
-        //Need some Edit
-        return Redirect::route('home')
+            //if some problem, not activate this account
+            return Redirect::route('home')
                 ->with('global', 'You are already Activated or some problem.');
+
+        }
     }
 
     /*Login as a user*/

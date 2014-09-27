@@ -17,12 +17,12 @@
 
             <ul class="nav navbar-nav">
                 <li><a href="{{ URL::route('home') }}">Home</a></li>
-                <li><a href="yourallquestion.html">Your Q's</a></li>
+                <li><a href="{{ URL::route('ask-question') }}">Ask a Q's</a></li>
             </ul>
             @if(Auth::check())
                 <ul class="nav navbar-nav navbar-right">
                     <li class="profile-name">
-                        <a href="#">
+                        <a href="{{ URL::route('profile-user', Auth::user()->username) }}">
                             <img src="https://lh5.googleusercontent.com/-b0-k99FZlyE/AAAAAAAAAAI/AAAAAAAAAAA/eu7opA4byxI/photo.jpg?sz=20" class="img-circle" alt="Responsive image">
                             {{ Auth::user()->username }}
                         </a>

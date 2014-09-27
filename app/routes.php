@@ -15,6 +15,20 @@ Route::get('/', array(
     'as'    =>  'home',
     'uses'  =>  'HomeController@showWelcome'
 ));
+Route::get('user/{username}', array(
+    'as'    =>  'profile-user',
+    'uses'  =>  'profileController@user'
+));
+
+/*Ask a Question*/
+Route::get('/ask-qusetion', array(
+    'as'    =>  'ask-question',
+    'uses'  =>  'QuestionController@index'
+));
+Route::post('/ask-qusetion', array(
+    'as'    =>  'ask-question',
+    'uses'  =>  'QuestionController@getCreate'
+));
 
 
 /*

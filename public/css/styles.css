@@ -62,6 +62,7 @@ div.question > h2 {
 .navbar-default .container {
     background-color: #fff;
     border-bottom: 1px solid #f2f2f2;
+    margin-left: -1px;
     /* height: 73px; */
 }
 
@@ -198,7 +199,7 @@ p.myLeft {
     background-color: #45382e;
     border-left: 2px solid #fff;
     border-top: 5px solid #fff;
-    height: 200px;
+    height: 195px;
     color: #fff;
 }
 
@@ -347,4 +348,24 @@ input#remember {
     color: #e54d42;
 }
 
+.alert {
+    background-color: #e54d42;
+    color: rgba(255, 255, 255, 0.87);
+    padding: 5px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    border-radius: 0px;
+}
+.alert-dismissable .close, .alert-dismissible .close {
+    color: #000;
+}
+
+textarea {
+    width: 100%;
+    margin-bottom: 17px;
+    padding: 15px;
+    background-color: #ECF4F4;
+    border-radius: 2px;
+    border: none;
+}
 

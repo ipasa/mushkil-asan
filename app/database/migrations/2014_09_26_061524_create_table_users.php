@@ -14,7 +14,6 @@ class CreateTableUsers extends Migration {
 
 		Schema::create('users', function($table){
             $table  ->  increments('user_id');
-            $table  ->  primary('user_id');
             $table  ->  text('username');
             $table  ->  text('fullname');
             $table  ->  text('email');
@@ -33,7 +32,6 @@ class CreateTableUsers extends Migration {
 	 * @return void
 	 */
 	public function down(){
-
         Schema::drop('users');
 	}
 
