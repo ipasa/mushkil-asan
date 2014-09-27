@@ -21,9 +21,20 @@ Route::get('/', array(
 * Authenticate group
 */
 Route::group(array('before'=>'auth'), function(){
+
+    Route::group(array('before'=>'csrf'), function(){
+        Route::post('/changepassword',array(
+            'as'    =>  'change-password',
+            'uses'  =>  'UserManageController@postchangePassword'
+        ));
+    });
     Route::get('/logout', array(
         'as'    =>  'logout',
         'uses'  =>  'UserManageController@logoutUser'
+    ));
+    Route::get('/changepassword',array(
+        'as'    =>  'change-password',
+        'uses'  =>  'UserManageController@getchangePassword'
     ));
 });
 

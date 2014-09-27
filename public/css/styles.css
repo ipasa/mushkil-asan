@@ -1,3 +1,5 @@
+@import url(http://fonts.googleapis.com/css?family=Josefin+Slab:400,600);
+
 body {
     background-color: #f2f2f2;
     font-family: 'Open Sans', sans-serif;
@@ -336,6 +338,13 @@ h2 {
 
 input#remember {
     width: 20px;
+}
+
+.contcustom>p {
+    font-family: 'Josefin Slab', serif;
+    font-size: 20px;
+    font-weight: bolder;
+    color: #e54d42;
 }
 
 

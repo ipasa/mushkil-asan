@@ -110,7 +110,8 @@ class UserManageController extends BaseController {
                 return Redirect::intended('/');
             }else {
                 return  Redirect::route('login')
-                        ->with('error-message', 'Sorry, your User-name and Password Doesnot match or are you activated');
+                        ->with('error-message', 'Sorry, your User-name and Password Doesnot match or are you activated')
+                        ->withInput();
             }
         }
 
@@ -118,6 +119,47 @@ class UserManageController extends BaseController {
             ->with('error-message', 'Are you activated');
     }
 
+    /*Changing Password*/
+    public function getchangePassword(){
+        return View::make('users.changepassword')
+                ->with('title', 'Change Your Password');
+    }
+    public function postchangePassword(){
+
+        $rules = array(
+            'old-password'          =>  'required',
+            'new-password'          =>  'required|min:6',
+            'new-password-again'    =>  'required|same:new-password'
+        );
+        $validator = Validator::make(Input::all(), $rules);
+        if($validator->fails()){
+            return  Redirect::route('change-password')
+                    ->withErrors($validator)
+                    ->withInput();
+        }else {
+            $user = User::find(Auth::user()->user_id);
+
+            $oldPassword        =   Input::get('old-password');
+            $newPassword        =   Input::get('new-password');
+
+            if(Hash::check($oldPassword, $user->getAuthPassword())){
+
+                $user->password =   Hash::make($newPassword);
+
+                if($user->save()){
+                    return  Redirect::route('home')
+                            ->with('global', 'Your Password Has been Changed');
+                }
+            }else {
+                return  Redirect::route('change-password')
+                    ->with('error-message', 'Your Old Password is Incorrect');
+            }
+        }
+        return  Redirect::route('change-password')
+            ->with('error-message', 'Their is some error, we could not change your pasword. try again later');
+    }
+
+    /*Login Out User*/
     public function logoutUser() {
         Auth::logout();
         return Redirect::route('home')
