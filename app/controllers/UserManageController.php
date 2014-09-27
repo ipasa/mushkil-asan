@@ -69,13 +69,15 @@ class UserManageController extends BaseController {
             $user->code   ='';
 
             if($user->save()){
-                Redirect::route('home');// Need Some Edit
+                return  Redirect::route('login')
+                        ->with('global', 'Your Account Has been activated now, Please Login');;// Need Some Edit
             }
         }
 
         //if some problem, not activate this account
         //Need some Edit
-        Redirect::route('home');
+        return Redirect::route('home')
+                ->with('global', 'You are already Activated or some problem.');
     }
 
     /*Login as a user*/
@@ -94,16 +96,31 @@ class UserManageController extends BaseController {
                     ->withErrors($validator)
                     ->withInput();
         }else {
+
+            $rememberMe = (Input::has('remember'))?true:false;
+
             $auth = Auth::attempt(array(
                 'email'     =>  Input::get('email'),
                 'password'  =>  Input::get('password'),
                 'active'    =>  1
-            ));
+            ), $rememberMe);
 
             if($auth){
                 //Redirect to the intendented page
-
+                return Redirect::intended('/');
+            }else {
+                return  Redirect::route('login')
+                        ->with('error-message', 'Sorry, your User-name and Password Doesnot match or are you activated');
             }
         }
+
+        return  Redirect::route('login')
+            ->with('error-message', 'Are you activated');
+    }
+
+    public function logoutUser() {
+        Auth::logout();
+        return Redirect::route('home')
+                ->with('global', 'you are logout');
     }
 }

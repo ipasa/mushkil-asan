@@ -6,6 +6,13 @@
     <!-- IPad Login - START -->
     <div class="container">
         <div class="row colored">
+
+            @if(Session::has('error-message'))
+                <div class="contcustom">
+                    <p>{{ Session::get('error-message') }}</p>
+                </div>
+            @endif
+
             <div class="contcustom">
                 <span>
                     <img class="profile-img" src="https://lh5.googleusercontent.com/-b0-k99FZlyE/AAAAAAAAAAI/AAAAAAAAAAA/eu7opA4byxI/photo.jpg?sz=120"
@@ -35,6 +42,11 @@
                               {{ $errors->first('password') }}
                             </div>
                         @endif
+
+                    <p style="float: left">
+                        <input type="checkbox" name="remember" id="remember" class="float-left">
+                        <label for="remember">Remember Me</label>
+                    </p>
 
                     <button type="submit" class="btn btn-default wide">
                         <span class="fa fa-check med"></span>

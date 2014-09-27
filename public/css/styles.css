@@ -314,3 +314,28 @@ h2 {
 .wide:hover {
     background-color: #49d184;
 }
+
+.profile-name {
+    text-transform: capitalize;
+}
+.nav>li>a {
+    position: relative;
+    display: block;
+    padding: 10px 10px;
+}
+
+.navbar > .container .navbar-brand, .navbar > .container-fluid .navbar-brand {
+    margin: 5px 15px 0 0;
+}
+
+.error-section {
+    background-color: #fff;
+    margin-bottom: 25px;
+    margin-top: 0px;
+}
+
+input#remember {
+    width: 20px;
+}
+
+
