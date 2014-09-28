@@ -352,7 +352,8 @@ input#remember {
     background-color: #e54d42;
     color: rgba(255, 255, 255, 0.87);
     padding: 5px;
-    margin-bottom: 20px;
+    margin-bottom: 12px;
+    margin-top: 17px;
     border: 1px solid transparent;
     border-radius: 0px;
 }
@@ -368,4 +369,17 @@ textarea {
     border-radius: 2px;
     border: none;
 }
+
+
+.askquestion {
+    width: 580px;
+}
+.askquestion textarea {
+    border-radius: 0;
+}
+
+
+
+
+
 

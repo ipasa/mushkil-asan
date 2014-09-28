@@ -15,19 +15,22 @@ class QuestionController extends BaseController {
 
     public function getCreate(){
         $validator = Validator::make(Input::all(), array(
-            'question'  =>  'required|max:255'
+            'questionTitle'     =>  'required|max:155',
+            'question'          =>  'required|max:255'
         ));
 
         if($validator->fails()){
             return  Redirect::route('ask-question')
                     ->withErrors($validator);
         }else{
-            $question   =   Input::get('question');
-            $user_id    =   Auth::user()->user_id;
+            $questionTitle      =   Input::get('questionTitle');
+            $question           =   Input::get('question');
+            $user_id            =   Auth::user()->user_id;
 
             $singlequestion =  Question::create(array(
-                'user_id'   =>  $user_id,
-                'question'  =>  $question
+                'user_id'           =>  $user_id,
+                'question-title'    =>  $questionTitle,  
+                'question'          =>  $question
             ));
 
             return  Redirect::route('home')
