@@ -18,7 +18,8 @@ class HomeController extends BaseController {
 	public function showWelcome()
 	{
 		return  View::make('hello')
-                ->with('title', 'Welcome to the Muskil - Asan');
+                ->with('title', 'Welcome to the Muskil - Asan')
+                ->with('questions', Question::unsolved());
 	}
 
 }

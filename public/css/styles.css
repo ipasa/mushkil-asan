@@ -378,6 +378,11 @@ textarea {
     border-radius: 0;
 }
 
+.pagination>li>a, .pagination>li>span {
+    border: 0;
+    border-radius: 0!important;
+}
+
 
 
 

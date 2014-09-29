@@ -29,7 +29,7 @@ class QuestionController extends BaseController {
 
             $singlequestion =  Question::create(array(
                 'user_id'           =>  $user_id,
-                'question-title'    =>  $questionTitle,  
+                'questiontitle'     =>  $questionTitle,
                 'question'          =>  $question
             ));
 

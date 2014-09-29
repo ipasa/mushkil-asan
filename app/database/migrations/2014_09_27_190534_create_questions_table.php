@@ -15,7 +15,7 @@ class CreateQuestionsTable extends Migration {
 		Schema::create('questions', function($table){
             $table  ->  increments('id');
             $table  ->  integer('user_id');
-            $table  ->  string('question-title');
+            $table  ->  string('questiontitle');
             $table  ->  string('question');
             $table  ->  boolean('solved');
             $table  ->  timestamps();
