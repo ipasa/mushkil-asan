@@ -104,7 +104,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -113,8 +112,19 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="muskil-asan" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="muskil-asan" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -222,9 +232,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="420">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#user#0;n#Question#0;n#!!top" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -435,7 +442,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.6256078" vertical-offset="937" max-vertical-offset="1890">
           <caret line="63" column="56" selection-start-line="63" selection-start-column="56" selection-end-line="63" selection-end-column="56" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -443,7 +449,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.7617504" vertical-offset="475" max-vertical-offset="1092">
           <caret line="45" column="42" selection-start-line="5" selection-start-column="0" selection-end-line="45" selection-end-column="42" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -451,7 +456,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.60615885" vertical-offset="256" max-vertical-offset="1428">
           <caret line="30" column="73" selection-start-line="30" selection-start-column="73" selection-end-line="30" selection-end-column="73" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -459,7 +463,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.74545455" vertical-offset="7719" max-vertical-offset="8421">
           <caret line="391" column="1" selection-start-line="391" selection-start-column="1" selection-end-line="391" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -467,25 +470,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.5786062" vertical-offset="315" max-vertical-offset="1197">
           <caret line="32" column="90" selection-start-line="32" selection-start-column="78" selection-end-line="32" selection-end-column="90" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/routes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.82857144" vertical-offset="3" max-vertical-offset="777">
-          <caret line="57" column="21" selection-start-line="57" selection-start-column="21" selection-end-line="57" selection-end-column="21" />
-          <folding>
-            <element signature="e#410#487#0#PHP" expanded="false" />
-            <element signature="e#648#731#0#PHP" expanded="false" />
-            <element signature="e#763#850#0#PHP" expanded="false" />
-            <element signature="e#914#1009#0#PHP" expanded="false" />
-            <element signature="e#1133#1316#1#PHP" expanded="false" />
-            <element signature="e#1345#1441#0#PHP" expanded="false" />
-            <element signature="e#1477#1589#0#PHP" expanded="false" />
-            <element signature="e#1626#1730#0#PHP" expanded="false" />
-            <element signature="e#1807#2763#1#PHP" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -493,7 +477,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.73333335" vertical-offset="0" max-vertical-offset="630">
           <caret line="22" column="36" selection-start-line="22" selection-start-column="24" selection-end-line="22" selection-end-column="36" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -501,9 +484,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.46666667" vertical-offset="0" max-vertical-offset="630">
           <caret line="16" column="66" selection-start-line="16" selection-start-column="45" selection-end-line="16" selection-end-column="66" />
-          <folding>
-            <element signature="n#user#0;n#Question#0;n#!!top" expanded="false" />
-          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/routes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8333333" vertical-offset="63" max-vertical-offset="903">
+          <caret line="57" column="17" selection-start-line="57" selection-start-column="17" selection-end-line="57" selection-end-column="31" />
         </state>
       </provider>
     </entry>
