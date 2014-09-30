@@ -11,11 +11,15 @@ class profileController extends BaseController {
 
             return  View::make('profile.view')
                     ->with('title', 'Personal Profile Page')
-                    ->with('singleuser', $user);
+                    ->with('singleuser', $user)
+                    ->with('yourquestion', Question::UserQusetion($user->user_id));
         }
 
         return App::abort(404);
     }
-
-
+    public function personalQuestions(){
+        return  View::make('profile.questionPersonal')
+                ->with('title', 'Your Question')
+                ->with('allQuestions', Question::yourQusetion());
+    }
 }

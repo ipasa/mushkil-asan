@@ -55,6 +55,10 @@ Route::group(array('before'=>'auth'), function(){
         'as'    =>  'change-password',
         'uses'  =>  'UserManageController@getchangePassword'
     ));
+    Route::get('/user-questions', array(
+        'as'    =>  'ypquestion',
+        'uses'  =>  'profileController@personalQuestions'
+    ));
 });
 
 /*

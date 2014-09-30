@@ -28,6 +28,7 @@
                             {{ Auth::user()->username }}
                         </a>
                     </li>
+                    <li><a href="{{ URL::route('ypquestion') }}">your Q's</a>
                     <li><a href="{{ URL::route('change-password') }}">Change Password</a>
                     <li><a href="{{ URL::route('logout') }}">Logout</a></li>
                 </ul>

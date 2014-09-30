@@ -53,9 +53,17 @@
                         <div class="row">
                             <div class="col-md-12 info-1">
                                 <h3>All Of Pasha's Qusetion -</h3>
-                                <ul>
-                                    <li></li>
-                                </ul>
+                                @if($yourquestion->isEmpty())
+                                    <p>No Question</p>
+                                @else
+                                    <ul>
+                                        @foreach($yourquestion as $question)
+                                            <li> {{ Str::limit(e($question->questiontitle, 10)) }}</li>
+                                        @endforeach
+
+                                        {{ $yourquestion->links() }}
+                                        @endif
+                                    </ul>
                             </div>
                         </div>
                         <div class="row">

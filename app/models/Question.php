@@ -12,5 +12,13 @@ class Question extends Eloquent{
             ->orderBy('id', 'DESC')
             ->paginate(3);
     }
+
+    public static function yourQusetion(){
+        return static::where('user_id', '=', Auth::user()->user_id)->paginate(2);
+    }
+
+    public static function UserQusetion($id){
+        return static::where('user_id', '=', $id)->paginate(4);
+    }
 }
 
