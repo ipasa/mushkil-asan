@@ -15,7 +15,7 @@ Route::get('/', array(
     'as'    =>  'home',
     'uses'  =>  'HomeController@showWelcome'
 ));
-Route::get('user/{username}', array(
+Route::get('@{username}', array(
     'as'    =>  'profile-user',
     'uses'  =>  'profileController@user'
 ));
@@ -30,6 +30,11 @@ Route::post('/ask-qusetion', array(
     'uses'  =>  'QuestionController@getCreate'
 ));
 
+/*Showing a Single Question*/
+Route::get('/question/{qid}', array(
+    'as'    =>  'single-question',
+    'uses'  =>  'QuestionController@singleQuestion'
+));
 
 /*
 * Authenticate group

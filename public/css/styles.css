@@ -93,6 +93,10 @@ div.question > h2 {
     border-bottom: 1px solid #E0E0E0;
 }
 
+.singlepage-single-question {
+    margin-bottom: 40px;
+}
+
 p.myRight {
     float: right;
 }
@@ -107,7 +111,8 @@ p.myLeft {
 }
 
 .cover-photo {
-    margin: 0;
+    margin-top: -20px;
+    margin-bottom: -20px;
     padding: 0;
     overflow: hidden;
     height: 280px;

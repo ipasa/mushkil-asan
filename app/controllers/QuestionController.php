@@ -38,4 +38,10 @@ class QuestionController extends BaseController {
 
         }
     }
+
+    public function singleQuestion($qid){
+        return  View::make('questions.single-question')
+                ->with('title', 'Single Question')
+                ->with('singleQuestion', Question::find($qid));
+    }
 }

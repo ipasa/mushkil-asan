@@ -26,10 +26,10 @@
                 </div><!-- End of views -->
 
                 <div class="col-md-9 question">
-                    <h2>{{ $question->questiontitle }}</h2>
-                    <p>{{ $question->question }}</p>
+                    <h2>{{ HTML::linkRoute('single-question', $question->questiontitle, $question->id ) }}</h2>
+                    <p>{{ Str::limit($question->question, 200, ' ( Read More... )') }}</p>
                     <p class="myRight">
-                        Asked by - <a href="#">{{ ucfirst($question->user->username)  }}</a>
+                        Asked by - {{ HTML::linkRoute('profile-user', ucfirst($question->user->username), $question->user->username) }}
                     </p>
                 </div><!-- End of question -->
               </div>{{--End of row--}}

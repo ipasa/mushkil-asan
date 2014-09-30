@@ -3,10 +3,11 @@
 class profileController extends BaseController {
     public function user($username){
 
-        $user = User::where('username', '=', $username);
+        $user   =   User::where('username', '=', $username);
+
         if($user->count()){
 
-            $user = $user->first();
+            $user       =   $user->first();
 
             return  View::make('profile.view')
                     ->with('title', 'Personal Profile Page')
@@ -15,4 +16,6 @@ class profileController extends BaseController {
 
         return App::abort(404);
     }
+
+
 }

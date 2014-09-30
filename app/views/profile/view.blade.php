@@ -52,10 +52,10 @@
                     <div class="col-md-5">
                         <div class="row">
                             <div class="col-md-12 info-1">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem, atque corrupti similique recusandae nihil. Voluptate modi laborum, hic a ut repellendus aliquid in voluptatem perspiciatis, fuga reiciendis rerum facilis necessitatibus?</p>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem, atque corrupti similique recusandae nihil. Voluptate modi laborum, hic a ut repellendus aliquid in voluptatem perspiciatis, fuga reiciendis rerum facilis necessitatibus?</p>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem, atque corrupti similique recusandae nihil. Voluptate modi laborum, hic a ut repellendus aliquid in voluptatem perspiciatis, fuga reiciendis rerum facilis necessitatibus?</p>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem, atque corrupti similique recusandae nihil. Voluptate modi laborum, hic a ut repellendus aliquid in voluptatem perspiciatis, fuga reiciendis rerum facilis necessitatibus?</p>
+                                <h3>All Of Pasha's Qusetion -</h3>
+                                <ul>
+                                    <li></li>
+                                </ul>
                             </div>
                         </div>
                         <div class="row">
