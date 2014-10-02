@@ -31,7 +31,7 @@
                       <div class="col-md-2">
                         <p class="myLeft">
                           <button type="button" class="btn btn-primary btn-xs viewQuestion">{{ HTML::linkRoute('single-question', 'View', $allQuestion->id ) }}</button>
-                          <button type="button" class="btn btn-default btn-xs">Edit</button>
+                          <button type="button" class="btn btn-default btn-xs">{{ HTML::linkRoute('edit-question', 'Edit', $allQuestion->id ) }}</button>
                         </p>
                       </div>
                     </div>

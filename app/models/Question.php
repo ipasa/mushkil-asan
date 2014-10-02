@@ -7,6 +7,10 @@ class Question extends Eloquent{
         return $this->belongsTo('User');
     }
 
+    public function answers(){
+        return $this->hasMany('Answer');
+    }
+
     public static function unsolved(){
         return static::where('solved', '=', 0)
             ->orderBy('id', 'DESC')

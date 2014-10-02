@@ -44,4 +44,5 @@ class QuestionController extends BaseController {
                 ->with('title', 'Single Question')
                 ->with('singleQuestion', Question::find($qid));
     }
+
 }

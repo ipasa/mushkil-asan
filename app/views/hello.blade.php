@@ -13,8 +13,8 @@
             <div class="container single-question">
               <div class="row">
                 <div class="col-md-1 answer">
-                    <h2>0</h2>
-                    <p>Answers</p>
+                    <h2>{{ count($question->answers) }}</h2>
+                    <p>{{ Str::plural("Answer", count($question->answers) )}}</p>
                 </div><!-- End of answer -->
                 <div class="col-md-1 vote">
                     <h2>0</h2>

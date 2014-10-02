@@ -338,8 +338,9 @@ h2 {
 
 .error-section {
     background-color: #fff;
-    margin-bottom: 25px;
+    margin-bottom: 15px;
     margin-top: 0px;
+    padding: 10px 0px 0px;
 }
 
 input#remember {
@@ -390,6 +391,10 @@ textarea {
 .viewQuestion a {
     color: #fff;
 }
-
+.answer-section{
+    background-color: #245269;
+    color: azure;
+    margin-bottom: 10px;
+}
 
 

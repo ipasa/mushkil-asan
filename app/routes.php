@@ -46,6 +46,10 @@ Route::group(array('before'=>'auth'), function(){
             'as'    =>  'change-password',
             'uses'  =>  'UserManageController@postchangePassword'
         ));
+        Route::post('answer', array(
+            'as'    =>  'answer',
+            'uses'  =>  'AnswerController@answerQuestion'
+        ));
     });
     Route::get('/logout', array(
         'as'    =>  'logout',
@@ -58,6 +62,15 @@ Route::group(array('before'=>'auth'), function(){
     Route::get('/user-questions', array(
         'as'    =>  'ypquestion',
         'uses'  =>  'profileController@personalQuestions'
+    ));
+
+    Route::get('question/{questionid}/edit', array(
+        'as'    =>  'edit-question',
+        'uses'  =>  'profileController@editQuestions'
+    ));
+    Route::get('question/{questionid}/update', array(
+        'as'    =>  'update-question',
+        'uses'  =>  'profileController@updateQuestions'
     ));
 });
 
