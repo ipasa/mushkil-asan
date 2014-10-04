@@ -4,9 +4,15 @@
 
 <!-- For Question Section -->
 <section class="question-section">
-    <h2>Unsolved Questions : </h2>
-    @if(!$questions)
-        <p>No Questions</p>
+    <h2>Search Results : </h2>
+    @if($questions->isEmpty())
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3">
+                    <p>No Questions found</p>
+                </div>
+            </div>
+        </div>
     @else
         @foreach ($questions as $question)
 

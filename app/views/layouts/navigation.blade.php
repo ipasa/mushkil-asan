@@ -18,6 +18,7 @@
             <ul class="nav navbar-nav">
                 <li><a href="{{ URL::route('home') }}">Home</a></li>
                 <li><a href="{{ URL::route('ask-question') }}">Ask a Q's</a></li>
+                <li><a href="{{ URL::route('search-item') }}">Search</a></li>
             </ul>
             @if(Auth::check())
                 <ul class="nav navbar-nav navbar-right">

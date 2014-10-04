@@ -5,19 +5,45 @@
 <section class="question-section">
     <div class="container single-question singlepage-single-question">
         <div class="row">
-            <div class="col-md-1 answer">
-                <h2>{{ count($singleQuestion->answers) }}</h2>
-                <p>{{ Str::plural("Answer", count($singleQuestion->answers) )}}</p>
-            </div><!-- End of answer -->
+            <div class="col-md-3">
+                <div class="row">
+                    <div class="col-md-4 answer">
+                        <h2>{{ count($singleQuestion->answers) }}</h2>
+                        <p>{{ Str::plural("Answer", count($singleQuestion->answers) )}}</p>
+                    </div><!-- End of answer -->
 
-            <div class="col-md-1 vote">
-                <h2>0</h2>
-                <p>Votes</p>
-            </div><!-- End of vote -->
-            <div class="col-md-1 view">
-                <h2>5</h2>
-                <p>Views</p>
-            </div><!-- End of views -->
+                    <div class="col-md-4 vote">
+                        <h2>0</h2>
+                        <p>Votes</p>
+                    </div><!-- End of vote -->
+                    <div class="col-md-4 view">
+                        <h2>{{ $singleQuestion->numsofview }}</h2>
+                        <p>{{ Str::plural("View", ($singleQuestion->numsofview)) }}</p>
+                    </div><!-- End of views -->
+                </div>
+
+                {{--Vote Section--}}
+                @if(!Auth::check())
+                    <div class="row">
+                        <div class="col-md-12 answer">
+                            <p>Sorry, you donot have any authorization to vote this question. To vote this question, Pls login</p>
+                        </div>
+                    </div>
+                @else
+                    <div class="row">
+                        <div class="col-md-4 answer">
+                            <h2>^</h2>
+                            <p>Vote Up</p>
+                        </div><!-- End of answer -->
+
+                        <div class="col-md-4 col-md-offset-4 view">
+                            <h2>!</h2>
+                            <p>Down</p>
+                        </div><!-- End of views -->
+                    </div>
+                @endif
+
+                </div>
 
             <div class="col-md-9 question">
 

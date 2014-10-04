@@ -24,5 +24,11 @@ class Question extends Eloquent{
     public static function UserQusetion($id){
         return static::where('user_id', '=', $id)->paginate(4);
     }
+
+    public static function search($keyword){
+        return  static::where('question', 'LIKE', '%'.$keyword.'%')
+                ->paginate(3);
+        
+    }
 }
 

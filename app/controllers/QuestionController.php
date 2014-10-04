@@ -40,9 +40,16 @@ class QuestionController extends BaseController {
     }
 
     public function singleQuestion($qid){
+        $insertView             =   Question::find($qid);
+
+        $currentNumberOfView    =   $insertView->numsofview;
+        $insertView->numsofview =   $currentNumberOfView+1;
+        $insertView->save();
+
         return  View::make('questions.single-question')
                 ->with('title', 'Single Question')
-                ->with('singleQuestion', Question::find($qid));
+                ->with('singleQuestion', Question::find($qid)
+        );
     }
 
 }

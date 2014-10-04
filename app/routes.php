@@ -30,6 +30,19 @@ Route::post('/ask-qusetion', array(
     'uses'  =>  'QuestionController@getCreate'
 ));
 
+/*Serach a item*/
+Route::get('/search', array(
+    'as'    =>  'search-item',
+    'uses'  =>  'SearchController@getSearch'
+));
+Route::get('/results/{all}', array(
+    'uses'  =>  'SearchController@results'
+));
+Route::post('/search', array(
+    'as'    =>  'postSearch',
+    'uses'  =>  'SearchController@postSearch'
+));
+
 /*Showing a Single Question*/
 Route::get('/question/{qid}', array(
     'as'    =>  'single-question',
