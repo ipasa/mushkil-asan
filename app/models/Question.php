@@ -11,6 +11,10 @@ class Question extends Eloquent{
         return $this->hasMany('Answer');
     }
 
+    public function votes(){
+        return $this->hasMany('Vote');
+    }
+
     public static function unsolved(){
         return static::where('solved', '=', 0)
             ->orderBy('id', 'DESC')

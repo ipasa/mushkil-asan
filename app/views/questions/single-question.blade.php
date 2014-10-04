@@ -13,7 +13,7 @@
                     </div><!-- End of answer -->
 
                     <div class="col-md-4 vote">
-                        <h2>0</h2>
+                        <h2>{{ Vote::countVote($singleQuestion->id) }}</h2>
                         <p>Votes</p>
                     </div><!-- End of vote -->
                     <div class="col-md-4 view">
@@ -29,15 +29,21 @@
                             <p>Sorry, you donot have any authorization to vote this question. To vote this question, Pls login</p>
                         </div>
                     </div>
+                @elseif(Auth::user()->points<15)
+                    <div class="row">
+                        <div class="col-md-12 answer">
+                            <p>Sorry, Not Have Enough points to vote this Question. To get sufficien points - go to this page: link</p>
+                        </div>
+                    </div>
                 @else
                     <div class="row">
                         <div class="col-md-4 answer">
-                            <h2>^</h2>
+                            <h2>{{ HTML::linkRoute('vote-question', '^', $singleQuestion->id) }}</h2>
                             <p>Vote Up</p>
                         </div><!-- End of answer -->
 
                         <div class="col-md-4 col-md-offset-4 view">
-                            <h2>!</h2>
+                            <h2>{{ HTML::linkRoute('vote-down-question', '^', $singleQuestion->id) }}</h2>
                             <p>Down</p>
                         </div><!-- End of views -->
                     </div>

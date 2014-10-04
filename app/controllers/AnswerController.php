@@ -20,6 +20,10 @@ class AnswerController extends BaseController{
             $insertAnswer->answer           =   Input::get('answer');
             $insertAnswer->save();
 
+            $insertPoint                    =   User::find(Auth::user()->user_id);
+            $insertPoint->points            =   $insertPoint->points+3;
+            $insertPoint->save();
+
             return  Redirect::route('single-question', $question_id)
                 ->with('global', 'Answer is successfully posted');
 

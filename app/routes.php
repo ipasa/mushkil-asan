@@ -49,6 +49,16 @@ Route::get('/question/{qid}', array(
     'uses'  =>  'QuestionController@singleQuestion'
 ));
 
+/*Vote a Question*/
+Route::get('vote/{qid}', array(
+    'as'    =>  'vote-question',
+    'uses'  =>  'VoteController@voteQuestion'
+));
+Route::get('vote-down/{qid}', array(
+    'as'    =>  'vote-down-question',
+    'uses'  =>  'VoteController@voteDownQuestion'
+));
+
 /*
 * Authenticate group
 */
