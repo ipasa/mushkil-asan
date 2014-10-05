@@ -34,5 +34,10 @@ class Question extends Eloquent{
                 ->paginate(3);
         
     }
+
+    public static function userQuestionCount($uid){
+        $qCount =   Question::where('user_id', '=', $uid);
+        return $qCount->count();
+    }
 }
 
