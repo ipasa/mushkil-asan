@@ -14,4 +14,11 @@ class Answer extends Eloquent{
     public function question(){
         return $this->belongsTo('Question');
     }
+
+    /*Count User Answer*/
+    public static function userAnswerCount($uid){
+        $qCount =   Answer::where('user_id', '=', $uid);
+        return $qCount->count();
+
+    }
 }

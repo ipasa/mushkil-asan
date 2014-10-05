@@ -12,16 +12,16 @@
             <div class="container single-question">
               <div class="row">
                 <div class="col-md-1 answer">
-                    <h2>0</h2>
-                    <p>Answers</p>
+                    <h2>{{ count($allQuestion->answers) }}</h2>
+                    <p>{{ Str::plural("Answer", count($allQuestion->answers) )}}</p>
                 </div><!-- End of answer -->
                 <div class="col-md-1 vote">
-                    <h2>0</h2>
+                    <h2>{{ Vote::countVote($allQuestion->id) }}</h2>
                     <p>Votes</p>
                 </div><!-- End of vote -->
                 <div class="col-md-1 view">
-                    <h2>5</h2>
-                    <p>Views</p>
+                    <h2>{{ $allQuestion->numsofview }}</h2>
+                    <p>{{ Str::plural("View", ($allQuestion->numsofview)) }}</p>
                 </div><!-- End of views -->
 
                 <div class="col-md-9 question">

@@ -23,7 +23,7 @@
                     <p>{{ Str::plural("Answer", count($question->answers) )}}</p>
                 </div><!-- End of answer -->
                 <div class="col-md-1 vote">
-                    <h2>0</h2>
+                    <h2>{{ Vote::countVote($question->id) }}</h2>
                     <p>Votes</p>
                 </div><!-- End of vote -->
                 <div class="col-md-1 view">

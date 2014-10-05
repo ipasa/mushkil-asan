@@ -30,14 +30,14 @@
 
                         <div class="row profileRating">
                             <div class="col-lg-4 rating ratingRowHeight">
-                                <h1>5</h1>
-                                <p>Answer</p>
+                                <h1>{{ Question::userQuestionCount($singleuser->user_id) }}</h1>
+                                <p>Question</p>
                                 <hr>
-                                <h1>129</h1>
-                                <p>Answer</p>
+                                <h1>{{ Answer::userAnswerCount($singleuser->user_id) }}</h1>
+                                <p>Answers</p>
                                 <hr>
-                                <h1>22</h1>
-                                <p>Answer</p>
+                                <h1>{{ Vote::userVoteCount($singleuser->user_id) }}</h1>
+                                <p>Likes</p>
                                 <hr>
                             </div>
 

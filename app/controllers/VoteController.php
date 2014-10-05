@@ -2,7 +2,6 @@
 
 class VoteController extends BaseController{
     public function voteQuestion($qid){
-
         $vote   =   new Vote;
 
         $vote->user_id      =   Auth::user()->user_id;

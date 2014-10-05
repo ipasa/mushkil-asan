@@ -7,4 +7,10 @@ class Vote extends Eloquent{
         $count  =   Vote::where('question_id', '=', $qid);
         return $myCount =   $count->count();
     }
+
+    /*Count User Votes*/
+    public static function userVoteCount($uid){
+        $qCount =   Vote::where('user_id', '=', $uid);
+        return $qCount->count();
+    }
 }
