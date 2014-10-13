@@ -38,12 +38,15 @@
                 @else
                     <div class="row">
                         <div class="col-md-4 answer">
-                            <h2>{{ HTML::linkRoute('vote-question', '^', $singleQuestion->id) }}</h2>
+                            <h2><a href="{{ URL::route('vote-question', $singleQuestion->id) }}"><span class="glyphicon glyphicon-thumbs-up"></span></a></h2>
+                            {{--<h2>{{ HTML::linkRoute('vote-question', '<span class="glyphicon glyphicon-thumbs-up"></span>', $singleQuestion->id) }}</h2>--}}
                             <p>Vote Up</p>
                         </div><!-- End of answer -->
 
                         <div class="col-md-4 col-md-offset-4 view">
-                            <h2>{{ HTML::linkRoute('vote-down-question', '^', $singleQuestion->id) }}</h2>
+                            <h2><a href="{{ URL::route('vote-down-question', $singleQuestion->id) }}"><span class="glyphicon glyphicon-thumbs-down
+"></span></a></h2>
+                            {{--<h2>{{ HTML::linkRoute('vote-down-question', '^', $singleQuestion->id) }}</h2>--}}
                             <p>Down</p>
                         </div><!-- End of views -->
                     </div>
