@@ -1,6 +1,7 @@
 <?php
 
 class VoteController extends BaseController{
+
     public function voteQuestion($qid){
         $vote   =   new Vote;
 
