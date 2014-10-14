@@ -16,12 +16,13 @@ class QuestionController extends BaseController {
     public function getCreate(){
         $validator = Validator::make(Input::all(), array(
             'questionTitle'     =>  'required|max:155',
-            'question'          =>  'required|max:255'
+            'question'          =>  'required|max:655'
         ));
 
         if($validator->fails()){
             return  Redirect::route('ask-question')
-                    ->withErrors($validator);
+                    ->withErrors($validator)
+                    ->withInput();
         }else{
             $questionTitle      =   Input::get('questionTitle');
             $question           =   Input::get('question');

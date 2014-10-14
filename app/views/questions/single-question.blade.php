@@ -44,8 +44,7 @@
                         </div><!-- End of answer -->
 
                         <div class="col-md-4 col-md-offset-4 view">
-                            <h2><a href="{{ URL::route('vote-down-question', $singleQuestion->id) }}"><span class="glyphicon glyphicon-thumbs-down
-"></span></a></h2>
+                            <h2><a href="{{ URL::route('vote-down-question', $singleQuestion->id) }}"><span class="glyphicon glyphicon-thumbs-down"></span></a></h2>
                             {{--<h2>{{ HTML::linkRoute('vote-down-question', '^', $singleQuestion->id) }}</h2>--}}
                             <p>Down</p>
                         </div><!-- End of views -->

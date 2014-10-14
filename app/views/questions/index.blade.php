@@ -19,7 +19,7 @@
                               {{ $errors->first('questionTitle') }}
                             </div>
                         @endif
-                        <input type="text" name="questionTitle" placeholder="Question title" >
+                        <input type="text" name="questionTitle" placeholder="Question title"{{ Input::old('questionTitle')?' value="'.Input::old('questionTitle') .'"':'' }} >
 
                         @if($errors->has('question'))
                             <div class="alert alert-danger alert-dismissible" role="alert">
