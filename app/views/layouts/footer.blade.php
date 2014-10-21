@@ -2,7 +2,7 @@
 <div class="container">
     <div class="row profileRow">
         <div class="col-md-9">
-            <h1>&copy;Muskil Asan</h1>
+            <h1>&copy;Mushkil Asan</h1>
             <hr class="customHR">
         </div>
 
