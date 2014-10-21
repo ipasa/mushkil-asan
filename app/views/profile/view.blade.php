@@ -18,13 +18,13 @@
                     <div class="col-md-7">
                         <div class="row">
                             <div class="col-lg-8 name-tag profileRowHeight">
-                                <h3 style="text-transform: capitalize">{{ $singleuser->username }}'s Personal Information:</h3>
+                                <u><h3 style="text-transform: capitalize">{{ $singleuser->username }}'s Personal Information:</h3></u>
                                 <p>Name : {{ $singleuser->fullname }}</p>
                                 <p>Email : {{ $singleuser->email }}</p>
-                                <p>Phone : 8801737104224</p>
+                                {{--<p>Phone : 8801737104224</p>--}}
                             </div>
                             <div class="col-lg-4 profile-photo profileRowHeight">
-                                <img src="{{ asset('assets/profile-photo/photo-1.jpg') }}" class="img-responsive" alt="Pasha">
+                                <img src="{{ asset('assets/profile-photo/photo-1.jpeg') }}" class="img-responsive" alt="Pasha">
                             </div>
                         </div>
 

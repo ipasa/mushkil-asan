@@ -1,4 +1,12 @@
 @import url(http://fonts.googleapis.com/css?family=Josefin+Slab:400,600);
+@import url(http://fonts.googleapis.com/css?family=Arvo:400italic|Roboto);
+
+/*
+--For Question
+font-family: 'Arvo', serif;
+
+--For Answer
+font-family: 'Roboto', sans-serif;*/
 
 body {
     background-color: #f2f2f2;
@@ -297,6 +305,14 @@ h2 {
     margin-bottom: 20px;
     font-weight: bold;
     color: #ABABAB;
+    font-family: 'Arvo', serif;
+}
+
+h2 a{
+    font-family: 'Arvo', serif;
+}
+p.questiondesc {
+    font-family: 'Roboto', sans-serif;
 }
 
 .btn {
@@ -404,7 +420,20 @@ textarea {
 }
 .search-button{
     width: 150px;
+}
 
+.footer-menu{
+    display: block;
+    width: auto;
+    position: relative;
+    right: 0;
+    bottom: -63px;
+}
+.footer-menu h6{
+    display: inline-block;
+}
+.footer-menu h6:after{
+    content: " |";
 }
 
 

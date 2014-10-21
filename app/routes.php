@@ -140,3 +140,19 @@ Route::group(array('before'=>'guest'), function(){
     ));
 
 });
+
+/*Footer Menu Route*/
+Route::get('about-us', array(
+    'as'    =>  'about-us',
+    'uses'  =>  'FooterController@aboutus'
+));
+
+Route::get('rules', array(
+    'as'    =>  'rules',
+    'uses'  =>  'FooterController@rules'
+));
+
+Route::get('creator', array(
+    'as'    =>  'creator',
+    'uses'  =>  'FooterController@creator'
+));

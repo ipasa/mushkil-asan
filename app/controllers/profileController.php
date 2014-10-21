@@ -35,7 +35,7 @@ class profileController extends BaseController {
         $id =   Input::get('update_question_id');
         $validator = Validator::make(Input::all(), array(
             'questionTitle'     =>  'required|max:155',
-            'question'          =>  'required|max:655'
+            'question'          =>  'max:655'
         ));
 
         if($validator->fails()){

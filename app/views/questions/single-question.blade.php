@@ -60,7 +60,7 @@
                 <h6 style="margin-bottom: 20px">Asking date - {{ date("d F Y",strtotime($singleQuestion->created_at)) }}, last edit date - {{ date("d F Y",strtotime($singleQuestion->updated_at)) }}</h6>
                 <hr>
 
-                <p>{{ $singleQuestion->question }}</p>
+                <p class="questiondesc">{{ $singleQuestion->question }}</p>
 
                 {{--Responsible for Edit a Question--}}
                 {{--<div class="row">

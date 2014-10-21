@@ -16,7 +16,7 @@ class QuestionController extends BaseController {
     public function getCreate(){
         $validator = Validator::make(Input::all(), array(
             'questionTitle'     =>  'required|max:155',
-            'question'          =>  'required|max:655'
+            'question'          =>  'max:655'
         ));
 
         if($validator->fails()){
