@@ -160,6 +160,11 @@ class UserManageController extends BaseController {
             ->with('error-message', 'Their is some error, we could not change your pasword. try again later');
     }
 
+    /*Forget Password*/
+    public function forgetPass(){
+        return 'forgetPass';
+    }
+
     /*Login Out User*/
     public function logoutUser() {
         Auth::logout();

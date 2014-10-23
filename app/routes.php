@@ -1,16 +1,5 @@
 <?php
 
-/*
-|--------------------------------------------------------------------------
-| Application Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register all of the routes for an application.
-| It's a breeze. Simply tell Laravel the URIs it should respond to
-| and give it the Closure to execute when that URI is requested.
-|
-*/
-
 Route::get('/', array(
     'as'    =>  'home',
     'uses'  =>  'HomeController@showWelcome'
@@ -139,6 +128,13 @@ Route::group(array('before'=>'guest'), function(){
         'uses'  =>  'UserManageController@getLoginUser'
     ));
 
+    /*forget-password*/
+    Route::get('forget-password', array(
+        'as'      =>  'forget-password',
+        'uses'    =>  'UserManageController@forgetPass'
+    ));
+
+
 });
 
 /*Footer Menu Route*/
@@ -146,12 +142,10 @@ Route::get('about-us', array(
     'as'    =>  'about-us',
     'uses'  =>  'FooterController@aboutus'
 ));
-
 Route::get('rules', array(
     'as'    =>  'rules',
     'uses'  =>  'FooterController@rules'
 ));
-
 Route::get('creator', array(
     'as'    =>  'creator',
     'uses'  =>  'FooterController@creator'

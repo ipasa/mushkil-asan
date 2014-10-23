@@ -48,6 +48,10 @@
                         <label for="remember">Remember Me</label>
                     </p>
 
+                    <p class="text-right">
+                        <a href="{{ URL::route('forget-password') }}">Forget your Password ?</a>
+                    </p>
+
                     <button type="submit" class="btn btn-default wide">
                         <span class="fa fa-check med"></span>
                     </button>
