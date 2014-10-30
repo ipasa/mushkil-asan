@@ -1,15 +1,13 @@
-@import url(http://fonts.googleapis.com/css?family=Josefin+Slab:400,600);
-@import url(http://fonts.googleapis.com/css?family=Arvo:400italic|Roboto);
+/* Font Family For This site */
+@import url(http://fonts.googleapis.com/css?family=Merriweather);
 
-/*
---For Question
-font-family: 'Arvo', serif;
-
---For Answer
-font-family: 'Roboto', sans-serif;*/
+/* Uses:
+font-family: 'Merriweather', serif; */
 
 body {
-    background-color: #f2f2f2;
+    /* background-color: #f2f2f2; */
+    background: url(61.jpg) center center fixed;
+    background-size: cover;
     font-family: 'Open Sans', sans-serif;
 }
 
@@ -51,7 +49,7 @@ div.question p {
 }
 
 .question-section {
-    background-color: #f2f2f2;
+    /* background-color: #f2f2f2; */
     width: 1170px;
     margin: 0 auto;
 }
@@ -312,7 +310,12 @@ h2 a{
     font-family: 'Arvo', serif;
 }
 p.questiondesc {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Merriweather', serif;
+    letter-spacing: 0.8px;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 18px;
+    line-height: 1.5;
 }
 
 .btn {
