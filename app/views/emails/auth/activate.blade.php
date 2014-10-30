@@ -1022,7 +1022,7 @@ table.divider {
                             <td class="column" style="padding-top: 0;padding-bottom: 0;padding-left: 0;padding-right: 0;vertical-align: top;text-align: left">
 
               <div class="image" style="font-size: 0;Margin-bottom: 24px" align="center">
-                <img class="gnd-corner-image gnd-corner-image-center gnd-corner-image-top" style="border-left-width: 0;border-top-width: 0;border-bottom-width: 0;border-right-width: 0;-ms-interpolation-mode: bicubic;display: block;max-width: 900px" src="{{ asset('assets/m6rT4MYFQ7CT8j9m2AEC_JakeGivens-SunsetinthePark.jpg') }}" alt="" width="600" height="398" />
+                <img class="gnd-corner-image gnd-corner-image-center gnd-corner-image-top" style="border-left-width: 0;border-top-width: 0;border-bottom-width: 0;border-right-width: 0;-ms-interpolation-mode: bicubic;display: block;max-width: 900px" src="https://dl.dropboxusercontent.com/u/52709251/Email-templating/email.jpg" alt="" width="600" height="398" />
               </div>
 
                                 <table class="contents" style="border-collapse: collapse;border-spacing: 0;width: 100%">
@@ -1030,9 +1030,9 @@ table.divider {
                                     <td class="padded" style="padding-top: 0;padding-bottom: 0;padding-left: 32px;padding-right: 32px;vertical-align: top">
 
             <h1 style="Margin-top: 0;font-weight: 700;letter-spacing: -0.03em;-webkit-font-smoothing: antialiased;color: #565656;font-size: 36px;line-height: 42px;Margin-bottom: 18px;font-family: sans-serif">Dear {{ $username }},&nbsp;</h1><p style="Margin-top: 0;-moz-osx-font-smoothing: grayscale;font-family: Georgia, serif;color: #565656;Margin-bottom: 24px;-webkit-font-smoothing: antialiased;font-size: 16px;line-height: 24px">Thank you very much for registering with us,<br />
-Your Account Activation Link is - {{ $link }} </p><p style="Margin-top: 0;-moz-osx-font-smoothing: grayscale;font-family: Georgia, serif;color: #565656;Margin-bottom: 24px;-webkit-font-smoothing: antialiased;font-size: 16px;line-height: 24px">To know the rules and regulation please visit this page-&#8230;&#8230;&#8230;&#8230;&#8230;&#8230;&#8230;&#8230;&#8230;&#8230;&#8230;&#8230;&#8230;&#8230;&#8230;&#8230;&#8230;&#8230;&#8230;&#8230;&#8230;.<br />
-Please enjoy the website,<br />
-Thank you<br />
+                Your Account Activation Link is - {{ $link }} </p><p style="Margin-top: 0;-moz-osx-font-smoothing: grayscale;font-family: Georgia, serif;color: #565656;Margin-bottom: 24px;-webkit-font-smoothing: antialiased;font-size: 16px;line-height: 24px">To know the rules and regulation please visit this page-&#8230;&#8230;&#8230;&#8230;&#8230;&#8230;&#8230;&#8230;&#8230;&#8230;&#8230;&#8230;&#8230;&#8230;&#8230;&#8230;&#8230;&#8230;&#8230;&#8230;&#8230;.<br />
+                Please enjoy the website,<br />
+                Thank you<br />
 &#2478;&#2497;&#2486;&#2453;&#2495;&#2482; &#2438;&#2488;&#2494;&#2472;<br />
 <a style="color: #41637e;text-decoration: underline;transition: color .2s" href="http://preview14102105.createsend1.com/t/t-l-jiqdyk-l-r/">www.muskil-asan.com</a></p>
 

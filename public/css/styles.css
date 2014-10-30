@@ -425,6 +425,13 @@ textarea {
     width: 150px;
 }
 
+
+
+
+.footer h1{
+    font-size: 36px;
+    color: #245269;
+}
 .footer-menu{
     display: block;
     width: auto;
