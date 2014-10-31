@@ -1,17 +1,7 @@
 @extends('layouts.default')
-
-<<<<<<< HEAD
 @section('content')
 
-<!-- For Question Section -->
-<section class="question-section">
-    <div class="row">
-        <div class="col-md-10 text-center">
-            <h2>About Our Site : </h2>
-        </div>
-    </div>
-</section><!-- End of Question Section -->
-=======
+
 @section('header')
 <link href='http://fonts.googleapis.com/css?family=Raleway:400,800,300' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" type="text/css" href="{{ asset('profile-page/css/normalize.css') }}" />
@@ -56,5 +46,4 @@
         el.addEventListener( 'click', function(ev) { ev.preventDefault(); } );
     } );
 </script>
->>>>>>> df8d1a22c8e9aeb4d89244a966d82826a768c0c7
 @endsection
