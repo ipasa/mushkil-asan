@@ -1,5 +1,5 @@
 <!-- Footer Option -->
-<div class="container">
+<footer class="container footer">
     <div class="row profileRow">
         <div class="col-md-9">
             <h1>&copy;Mushkil Asan</h1>
@@ -19,4 +19,4 @@
             </div>
         </div>
     </div><!-- End of Footer -->
-</div><!-- End of container -->
+</footer><!-- End of footer -->
