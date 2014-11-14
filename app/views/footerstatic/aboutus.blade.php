@@ -31,7 +31,7 @@
                 </figcaption>
             </figure>
             <figure class="effect-zoe">
-                <img src="{{ asset('profile-page/img/26.jpg') }}" alt="img26"/>
+                <img src="{{ asset('profile-page/img/raju.jpg') }}" alt="img26"/>
                 <figcaption>
                     <h2 class="fig-caption">Mahadi Hasan</h2>
                     <p class="description">Zoe never had the patience of her sisters. She deliberately punched the bear in his face.</p>
