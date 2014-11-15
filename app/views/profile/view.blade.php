@@ -21,7 +21,7 @@
                                 <u><h3 style="text-transform: capitalize">{{ $singleuser->username }}'s Personal Information:</h3></u>
                                 <p>Name : {{ $singleuser->fullname }}</p>
                                 <p>Email : {{ $singleuser->email }}</p>
-                                <p>Point's : {{ $singleuser->point }}</p>
+                                <p>Point's : {{ $singleuser->points }} point's</p>
                                 {{--<p>Phone : 8801737104224</p>--}}
                             </div>
                             <div class="col-lg-4 profile-photo profileRowHeight">
