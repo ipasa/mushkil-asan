@@ -16,6 +16,7 @@
                         <h2>{{ Vote::countVote($singleQuestion->id) }}</h2>
                         <p>Votes</p>
                     </div><!-- End of vote -->
+
                     <div class="col-md-4 view">
                         <h2>{{ $singleQuestion->numsofview }}</h2>
                         <p>{{ Str::plural("View", ($singleQuestion->numsofview)) }}</p>

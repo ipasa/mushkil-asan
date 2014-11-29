@@ -4,8 +4,22 @@ class Vote extends Eloquent{
     public $timestamps  =   false;
 
     public static function countVote($qid){
-        $count  =   Vote::where('question_id', '=', $qid);
-        return $myCount =   $count->count();
+        $countUp    =   Vote::where('question_id', '=', $qid)
+                        ->where('vote', '=', 1);
+        $countUp    =   $countUp->count();
+
+        $countDown  =   Vote::where('question_id', '=', $qid)
+                        ->where('vote', '=', 0);
+        $countDown  =   $countDown->count();
+
+        if($countUp>$countDown){
+            return $myCount =   $countUp;
+        }elseif($countUp<$countDown){
+            return $myCount =   '- '.$countDown;
+        }else{
+            return $myCount =   'No Vote Yet';
+        }
+
     }
 
     /*Count User Votes*/
