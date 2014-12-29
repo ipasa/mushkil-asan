@@ -4,7 +4,20 @@
 
 <!-- For Question Section -->
 <section class="question-section">
-    <h2>Unsolved Questions : </h2>
+    <div class="container show-item-container">
+        <div class="row">
+            <div class="col-md-6 show-item">
+                <span class="show-item-text text-left">Showing : {{ $showing }} Questions. </span>
+            </div>
+            <div class="col-md-6 show-item">
+                <span class="show-item-text text-right">What you wants to show : </span>
+                <a href="{{ URL::route('home') }}"><b>Unsolved </b>|</a>
+                <a href="{{ URL::route('solved') }}"><b>Solved </b>|</a>
+                <a href="{{ URL::route('top-view') }}"><b>Top View</b></a>
+            </div>
+        </div>
+    </div>
+
     @if(!$questions)
         <p>No Questions</p>
     @else

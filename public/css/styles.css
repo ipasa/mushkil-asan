@@ -97,6 +97,7 @@ div.question > h2 {
     background-color: #fff;
     padding-bottom: 15px;
     border-bottom: 1px solid #E0E0E0;
+    box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24);
 }
 
 .singlepage-single-question {
@@ -426,8 +427,6 @@ textarea {
 }
 
 
-
-
 .footer h1{
     font-size: 36px;
     color: #245269;
@@ -446,3 +445,21 @@ textarea {
     content: " |";
 }
 
+.show-item-container{
+    padding-bottom: 2px !important;
+    margin-bottom: -18px;
+}
+.show-item{
+    height: 40px;
+    background-color: #FFF;
+    border-bottom: 1px solid #F2F2F2;
+}
+.show-item-text {
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 400;
+    margin-top: 10px;
+}
+span .text-right{
+    text-align: right;
+}

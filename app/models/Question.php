@@ -20,6 +20,16 @@ class Question extends Eloquent{
             ->orderBy('id', 'DESC')
             ->paginate(3);
     }
+    public static function solved(){
+        return static::where('solved', '=', 1)
+            ->orderBy('id', 'DESC')
+            ->paginate(3);
+    }
+    public static function topview(){
+        return static::where('solved', '=', 0)
+            ->orderBy('numsofview', 'DESC')
+            ->paginate(3);
+    }
 
     public static function yourQusetion(){
         return static::where('user_id', '=', Auth::user()->user_id)->paginate(2);

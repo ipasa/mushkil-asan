@@ -18,7 +18,7 @@
                     <div class="col-md-7">
                         <div class="row">
                             <div class="col-lg-8 name-tag profileRowHeight">
-                                <u><h3 style="text-transform: capitalize">{{ $singleuser->username }}'s Personal Information:</h3></u>
+                                <u><h3 style="text-transform: capitalize">Personal Information:</h3></u>
                                 <p>Name : {{ $singleuser->fullname }}</p>
                                 <p>Email : {{ $singleuser->email }}</p>
                                 <p>Point's : {{ $singleuser->points }} point's</p>
@@ -43,9 +43,9 @@
                             </div>
 
                             <div class="col-lg-8 rating-additional ratingRowHeight">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum velit, quia ad, esse temporibus, placeat repellendus labore laboriosam illum fuga molestiae, delectus! Odit pariatur fugiat necessitatibus, voluptatibus tempore quia numquam!</p>
-
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum velit, quia ad, esse temporibus, placeat repellendus labore laboriosam illum fuga molestiae, delectus! Odit pariatur fugiat necessitatibus, voluptatibus tempore quia numquam!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum velit, quia ad, esse temporibus, placeat repellendus labore laboriosam illum fuga molestiae, delectus! Odit pariatur fugiat necessitatibus, voluptatibus tempore quia numquam!</p>
+                                <p>
+                                    {{ $singleuser->aboutme }}
+                                </p>
                             </div>
                         </div>
                     </div>

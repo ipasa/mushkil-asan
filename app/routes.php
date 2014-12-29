@@ -4,6 +4,15 @@ Route::get('/', array(
     'as'    =>  'home',
     'uses'  =>  'HomeController@showWelcome'
 ));
+Route::get('/solved', array(
+    'as'    =>  'solved',
+    'uses'  =>  'HomeController@showWelcomeSolved'
+));
+Route::get('/top-view', array(
+    'as'    =>  'top-view',
+    'uses'  =>  'HomeController@showWelcomeTopview'
+));
+
 Route::get('@{username}', array(
     'as'    =>  'profile-user',
     'uses'  =>  'profileController@user'

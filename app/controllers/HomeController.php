@@ -19,7 +19,24 @@ class HomeController extends BaseController {
 	{
 		return  View::make('hello')
                 ->with('title', 'Welcome to the Muskil - Asan')
-                ->with('questions', Question::unsolved());
+                ->with('questions', Question::unsolved())
+                ->with('showing', "Unsolved");
 	}
+
+    public function showWelcomeSolved()
+    {
+        return  View::make('hello')
+            ->with('title', 'Welcome to the Muskil - Asan')
+            ->with('questions', Question::solved())
+            ->with('showing', "Solved");
+    }
+    public function showWelcomeTopview()
+    {
+        return  View::make('hello')
+            ->with('title', 'Welcome to the Muskil - Asan')
+            ->with('questions', Question::topview())
+            ->with('showing', "Top-View");
+    }
+
 
 }
