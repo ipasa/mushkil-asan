@@ -162,7 +162,72 @@ class UserManageController extends BaseController {
 
     /*Forget Password*/
     public function forgetPass(){
-        return 'forgetPass';
+        return View::make('users.forget')
+            ->with('title',"Forget Password");
+    }
+    public function postforgetPass() {
+        /*
+         * Validation
+        */
+        $validation = Validator::make(Input::all(), array(
+            'email'     =>  'required|email'
+        ));
+        if($validation->fails()){
+            return  Redirect::route('forget-password')
+                ->withErrors($validation)
+                ->withInput();
+        }
+        else {
+            //Change the Password
+            $user = User::where('email', '=', Input::get('email'));
+
+            if($user->count()){
+                $user   =   $user->first();
+
+                /*Generatea new Code to reset account*/
+                $code       =   str_random(60);
+                $password   =   str_random(10);
+
+                $user->code             =   $code;
+                $user->password_temp    =   Hash::make($password);
+
+                if($user->save()){
+                    Mail::send('emails.auth.forget', array(
+                        'link'       =>  URL::route('account-recover',$code),
+                        'username'  =>  $user->username,
+                        'password'  =>  $password
+                    ),function($message) use ($user){
+                        $message->to($user->email, $user->username)->subject('Your new password');
+
+                    });
+                    return Redirect::route('home')
+                        ->with('global', 'We send you a new password');
+                }
+
+
+            }
+        }
+        return Redirect::route('forget-password')
+                ->with('global', 'Could not request a Password');
+    }
+    public function getRecover($code){
+        $user   =   User::where('code', '=', $code)
+                    ->where('password_temp', '!=', '');
+
+        if($user->count()){
+            $user   =   $user->first();
+
+            $user->password         =   $user->password_temp;
+            $user->password_temp    =   '';
+            $user->code             =   '';
+
+            if($user->save()){
+                return Redirect::route('home')
+                    ->with('global', 'Your account has been recovered and you can sihn inwith your new password');
+            }
+        }
+        return Redirect::route('home')
+            ->with('global', 'Could not recover your account');
     }
 
     /*Login Out User*/

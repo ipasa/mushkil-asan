@@ -7,7 +7,7 @@
     <div class="container show-item-container">
         <div class="row">
             <div class="col-md-6 show-item">
-                <span class="show-item-text text-left">Showing : {{ $showing }} Questions. </span>
+                <span class="show-item-text text-left">Showing : <span class="showing-item-signal">{{ $showing }} Questions.</span></span>
             </div>
             <div class="col-md-6 show-item">
                 <span class="show-item-text text-right">What you wants to show : </span>
@@ -40,7 +40,7 @@
 
                 <div class="col-md-9 question">
                     <h2>{{ HTML::linkRoute('single-question', $question->questiontitle, $question->id ) }}</h2>
-                    <p>{{ Str::limit($question->question, 200, ' ( Read More... )') }}</p>
+                    <p>{{ Str::limit($question->question, 200, HTML::linkRoute('single-question', ' (Read More...)', $question->id )) }}</p>
                     <p class="myRight">
                         Asked by - {{ HTML::linkRoute('profile-user', ucfirst($question->user->username), $question->user->username) }}
                     </p>

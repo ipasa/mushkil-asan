@@ -16,6 +16,17 @@ class VoteController extends BaseController{
             $vote->vote         =   1;
             $vote->save();
 
+            /*Insert point to the Vote user*/
+            $insertPoint                    =   User::find(Auth::user()->user_id);
+            $insertPoint->points            =   $insertPoint->points+2;
+            $insertPoint->save();
+
+            /*Insert point to the Question user*/
+            $questionuser                   =   Question::where('id', '=', $qid)->first();
+            $insertPoint                    =   User::find($questionuser->user_id);
+            $insertPoint->points            =   $insertPoint->points+3;
+            $insertPoint->save();
+
             return  Redirect::route('single-question', $qid)
                 ->with('global', 'Your Successfully vote up this question');
         }
@@ -34,6 +45,17 @@ class VoteController extends BaseController{
             $vote->question_id = $qid;
             $vote->vote = 0;
             $vote->save();
+
+            /*Insert point to the Vote user*/
+            $insertPoint                    =   User::find(Auth::user()->user_id);
+            $insertPoint->points            =   $insertPoint->points-1;
+            $insertPoint->save();
+
+            /*Insert point to the Question user*/
+            $questionuser                   =   Question::where('id', '=', $qid)->first();
+            $insertPoint                    =   User::find($questionuser->user_id);
+            $insertPoint->points            =   $insertPoint->points-3;
+            $insertPoint->save();
 
             return Redirect::route('single-question', $qid)
                 ->with('global', 'Your Successfully vote down this question');

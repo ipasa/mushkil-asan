@@ -1,5 +1,5 @@
 /* Font Family For This site */
-@import url(http://fonts.googleapis.com/css?family=Merriweather);
+@import url(http://fonts.googleapis.com/css?family=PT+Sans|Lato);
 
 /* Uses:
 font-family: 'Merriweather', serif; */
@@ -12,7 +12,9 @@ body {
 }
 
 .answer {
-    background: rgb(236, 218, 194);
+    /*background: rgb(236, 218, 194);*/
+    background-color: #25A5C4;
+    color: #ffffff;
 }
 
 .answer h2, p {
@@ -20,7 +22,9 @@ body {
 }
 
 .vote {
-    background: #cdcdcd;
+    /*background: #cdcdcd;*/
+    background-color: #0C6A91;
+    color: #ffffff;
 }
 
 .vote h2, p {
@@ -28,11 +32,17 @@ body {
 }
 
 .view {
-    background: #ccdccd;
+    /*background: #ccdccd;*/
+    background-color: #525174;
+    color: #ffffff;
 }
 
 .view h2, p {
     text-align: center;
+}
+.view h2, .answer h2, .vote h2{
+    color: #ffffff;
+    font-family: 'PT Sans', sans-serif;
 }
 
 div.question {
@@ -42,6 +52,7 @@ div.question {
 
 div.question p {
     text-align: left;
+    font-family: 'Lato', sans-serif;
 }
 
 .container {
@@ -157,6 +168,10 @@ p.myLeft {
 .profileRowHeight {
     height: 225px;
     overflow: hidden;
+    padding-left: 30px;
+}
+.profileRowHeight p{
+    text-indent: 30px;
 }
 
 .name-tag p {
@@ -204,7 +219,7 @@ p.myLeft {
 .info-1 {
     background-color: #b1b1ac;
     border-left: 2px solid #fff;
-    height: 380px;
+    height: 593px;
 }
 
 .info-2 {
@@ -226,8 +241,8 @@ p.myLeft {
 }
 
 .glyphicon {
-    border: 1px solid #a88251;
-    color: #a88251;
+    border: 1px solid #ffffff;
+    color: #ffffff;
     padding: 5px;
 }
 
@@ -311,7 +326,7 @@ h2 a{
     font-family: 'Arvo', serif;
 }
 p.questiondesc {
-    font-family: 'Merriweather', serif;
+    font-family: 'Lato', sans-serif;
     letter-spacing: 0.8px;
     font-weight: 400;
     font-style: normal;
@@ -457,9 +472,30 @@ textarea {
 .show-item-text {
     display: inline-block;
     font-size: 14px;
-    font-weight: 400;
+    font-weight: 600;
     margin-top: 10px;
+    font-family: 'Raleway', Arial, sans-serif;
+}
+.showing-item-signal{
+    font-weight: 800;
+    color: #0C6A91;
 }
 span .text-right{
     text-align: right;
+}
+
+/*Some style that added later*/
+div.question > h2 {
+    color: #0C6A91;
+    font-family: 'Lato', sans-serif;
+}
+a {
+    color: #25A5C4;
+    text-decoration: none;
+}
+.nav>li>a {
+    font-family: 'Raleway', Arial, sans-serif;
+}
+.question>h2{
+    text-transform: capitalize;
 }

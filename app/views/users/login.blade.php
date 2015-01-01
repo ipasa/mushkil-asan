@@ -49,7 +49,7 @@
                     </p>
 
                     <p class="text-right">
-                        <a href="{{ URL::route('forget-password') }}">Forget your Password ?</a>
+                        <a href="{{ URL::route('forget-password') }}">Forget Password</a>
                     </p>
 
                     <button type="submit" class="btn btn-default wide">

@@ -34,8 +34,12 @@ class QuestionController extends BaseController {
                 'question'          =>  $question
             ));
 
+            $insertPoint                    =   User::find($user_id);
+            $insertPoint->points            =   $insertPoint->points+5;
+            $insertPoint->save();
+
             return  Redirect::route('home')
-                    ->with('global', 'Your Question Success Fully Submitted');
+                    ->with('global', 'Your Question Successfully Submitted');
 
         }
     }

@@ -27,13 +27,13 @@
                 @if(!Auth::check())
                     <div class="row">
                         <div class="col-md-12 answer">
-                            <p>Sorry, you donot have any authorization to vote this question. To vote this question, Pls login</p>
+                            <p>Sorry, you don't have any authorization to vote this question. To vote this question, Pls login</p>
                         </div>
                     </div>
                 @elseif(Auth::user()->points<15)
                     <div class="row">
                         <div class="col-md-12 answer">
-                            <p>Sorry, Not Have Enough points to vote this Question. To get sufficien points - go to this page: link</p>
+                            <p>Sorry, not have enough points to vote this Question. To get sufficien points - go to this page: link</p>
                         </div>
                     </div>
                 @else

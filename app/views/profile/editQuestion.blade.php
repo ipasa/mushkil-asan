@@ -5,7 +5,7 @@
     <div class="container">
         <div class="row colored">
             <div class="contcustom askquestion">
-                <h2>Ask a Question</h2>
+                <h2>Edit the Question</h2>
 
                 @if(Auth::check())
                     <form action="{{ URL::route('update-question') }}" method="PUT">

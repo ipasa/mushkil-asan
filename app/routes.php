@@ -142,6 +142,15 @@ Route::group(array('before'=>'guest'), function(){
         'as'      =>  'forget-password',
         'uses'    =>  'UserManageController@forgetPass'
     ));
+    Route::get('forget-password/recover/{code}', array(
+        'as'      =>  'account-recover',
+        'uses'    =>  'UserManageController@getRecover'
+    ));
+
+    Route::post('forget-password', array(
+        'as'      =>  'forget-password',
+        'uses'    =>  'UserManageController@postforgetPass'
+    ));
 
 
 });

@@ -28,10 +28,11 @@
                     <h2>{{ HTML::linkRoute('single-question', $allQuestion->questiontitle, $allQuestion->id ) }}</h2>
                     <p>{{ Str::limit($allQuestion->question, 200, ' ( Read More... )') }}</p>
                     <div class="row">
-                      <div class="col-md-2">
+                      <div class="col-md-4">
                         <p class="myLeft">
-                          <button type="button" class="btn btn-primary btn-xs viewQuestion">{{ HTML::linkRoute('single-question', 'View', $allQuestion->id ) }}</button>
-                          <button type="button" class="btn btn-default btn-xs">{{ HTML::linkRoute('edit-question', 'Edit', $allQuestion->id ) }}</button>
+                            <button type="button" class="btn btn-primary btn-xs viewQuestion">{{ HTML::linkRoute('single-question', 'View', $allQuestion->id ) }}</button>
+                            <button type="button" class="btn btn-default btn-xs">{{ HTML::linkRoute('edit-question', 'Edit', $allQuestion->id ) }}</button>
+                            <button type="button" class="btn btn-default btn-xs btn-danger">{{ HTML::linkRoute('edit-question', 'Delete', $allQuestion->id ) }}</button>
                         </p>
                       </div>
                     </div>

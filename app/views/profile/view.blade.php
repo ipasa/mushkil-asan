@@ -17,16 +17,16 @@
                 <div class="row profileRow">
                     <div class="col-md-7">
                         <div class="row">
-                            <div class="col-lg-8 name-tag profileRowHeight">
+                            <div class="col-lg-12 name-tag profileRowHeight">
                                 <u><h3 style="text-transform: capitalize">Personal Information:</h3></u>
                                 <p>Name : {{ $singleuser->fullname }}</p>
                                 <p>Email : {{ $singleuser->email }}</p>
                                 <p>Point's : {{ $singleuser->points }} point's</p>
                                 {{--<p>Phone : 8801737104224</p>--}}
                             </div>
-                            <div class="col-lg-4 profile-photo profileRowHeight">
+                            {{--<div class="col-lg-4 profile-photo profileRowHeight">
                                 <img src="{{ asset('assets/profile-photo/photo-1.jpeg') }}" class="img-responsive" alt="Pasha">
-                            </div>
+                            </div>--}}
                         </div>
 
                         <div class="row profileRating">
@@ -43,6 +43,7 @@
                             </div>
 
                             <div class="col-lg-8 rating-additional ratingRowHeight">
+                                <h2><u>Something About Me</u> - </h2>
                                 <p>
                                     {{ $singleuser->aboutme }}
                                 </p>
@@ -67,7 +68,7 @@
                                     </ul>
                             </div>
                         </div>
-                        <div class="row">
+                        {{--<div class="row">
                             <div class="col-md-12 info-2">
                                 <h2>Social Profile - </h2>
                                 <ul>
@@ -77,7 +78,7 @@
                                     <li><b>Github</b>:Set Your ID.</li>
                                 </ul>
                             </div>
-                        </div>
+                        </div>--}}
                     </div>
                 </div><!-- your Detail's -->
             </div><!-- End of container -->
