@@ -41,6 +41,7 @@ class Question extends Eloquent{
 
     public static function search($keyword){
         return  static::where('question', 'LIKE', '%'.$keyword.'%')
+                ->orWhere('questiontitle', 'LIKE', '%'.$keyword.'%')
                 ->paginate(3);
         
     }

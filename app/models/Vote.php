@@ -17,7 +17,7 @@ class Vote extends Eloquent{
         }elseif($countUp<$countDown){
             return $myCount =   '- '.$countDown;
         }else{
-            return $myCount =   'No Vote Yet';
+            return $myCount =   'No';
         }
 
     }
