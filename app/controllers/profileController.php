@@ -65,4 +65,30 @@ class profileController extends BaseController {
         }
         return false;
     }
+
+    public function updateProfile(){
+        $user_id    =   Auth::user()->user_id;
+        $user_info  =   User::where('user_id', '=', $user_id)->first();
+
+        return View::make('profile.editProfile')
+                ->with('user_info', $user_info)
+                ->with('title', 'Update your profile');
+    }
+    public function mainUpdateProfile(){
+        $fullname       =   Input::get('fullname');
+        $tagline        =   Input::get('tagline');
+        $description    =   Input::get('description');
+
+        $name           =   Auth::user()->username;
+
+        $updateprofile                  =   User::find(Auth::user()->user_id);
+        $updateprofile->fullname        =   $fullname;
+        $updateprofile->tagline         =   $tagline;
+        $updateprofile->aboutme         =   $description;
+        $updateprofile->save();
+
+        return  Redirect::route('home')
+            ->with('global', 'Your profile Successfully Updated')
+            ->with('title', 'Mushkil-Asan');
+    }
 }

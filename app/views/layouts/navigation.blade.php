@@ -9,7 +9,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="{{ URL::route('home') }}"><b>মুশকিল আসান</b></a>
+            <a class="navbar-brand" href="{{ URL::route('home') }}"><b class="site-name">মুশকিল আসান</b></a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
@@ -30,6 +30,7 @@
                         </a>
                     </li>
                     <li><a href="{{ URL::route('ypquestion') }}">your Q's</a>
+                    <li><a href="{{ URL::route('update-profile') }}">Update Profile</a>
                     <li><a href="{{ URL::route('change-password') }}">Change Password</a>
                     <li><a href="{{ URL::route('logout') }}">Logout</a></li>
                 </ul>

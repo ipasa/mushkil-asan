@@ -8,7 +8,7 @@
                         <img src="{{ asset('assets/cover-photo/photo-1.jpg') }}" class="img-responsive" alt="Pasha">
                         <div class="myName">
                             <p>
-                                {{ $singleuser->fullname }}<br>PHP Lover
+                                {{ $singleuser->fullname }}<br>{{ $singleuser->tagline }}
                             </p>
                         </div>
                     </div>
@@ -43,7 +43,7 @@
                             </div>
 
                             <div class="col-lg-8 rating-additional ratingRowHeight">
-                                <h2><u>Something About Me</u> - </h2>
+                                <h2 class="about-me-desc"><u>Something About Me</u> - </h2>
                                 <p>
                                     {{ $singleuser->aboutme }}
                                 </p>

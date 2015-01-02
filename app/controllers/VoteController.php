@@ -54,7 +54,7 @@ class VoteController extends BaseController{
             /*Insert point to the Question user*/
             $questionuser                   =   Question::where('id', '=', $qid)->first();
             $insertPoint                    =   User::find($questionuser->user_id);
-            $insertPoint->points            =   $insertPoint->points-3;
+            $insertPoint->points            =   $insertPoint->points-2;
             $insertPoint->save();
 
             return Redirect::route('single-question', $qid)

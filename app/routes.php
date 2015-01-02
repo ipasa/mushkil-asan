@@ -93,6 +93,15 @@ Route::group(array('before'=>'auth'), function(){
         'as'    =>  'update-question',
         'uses'  =>  'profileController@updateQuestions'
     ));
+
+    Route::get('update-profile', array(
+        'as'    =>  'update-profile',
+        'uses'  =>  'profileController@updateProfile'
+    ));
+    Route::get('main-update-profile',array(
+        'as'    =>  'main-update-profile',
+        'uses'  =>  'profileController@mainUpdateProfile'
+    ));
 });
 
 /*

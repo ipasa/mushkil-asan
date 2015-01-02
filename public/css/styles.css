@@ -255,6 +255,11 @@ p.myLeft {
     top: 67px;
     left: 2px;
 }
+.footer-icon{
+    border: 1px solid #0C6A91;
+    color: #25A5C4;
+    padding: 5px;
+}
 
 /* Form-Design Code Section */
 
@@ -456,9 +461,10 @@ textarea {
 .footer-menu h6{
     display: inline-block;
 }
-.footer-menu h6:after{
+/*.footer-menu h6:after{
     content: " |";
-}
+}*/
+
 
 .show-item-container{
     padding-bottom: 2px !important;
@@ -498,4 +504,10 @@ a {
 }
 .question>h2{
     text-transform: capitalize;
+}
+.site-name{
+    color: #0C6A91;
+}
+.about-me-desc{
+    color:  #ffffff;
 }
